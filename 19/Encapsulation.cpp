@@ -1,37 +1,44 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-class Demo
-{
-    public:
-       int A;
-       int B; 
+// Declare a class named 'Demo'
+class Demo {
+public:
+    // Declare two integer data members 'A' and 'B' to store values
+    int A;
+    int B;
 
-        void Fun()
-        {
-            cout<<"Inside Fun\n";
-        }
+    // Member function 'Fun' that prints "Inside Fun\n" to the console
+    void Fun() {
+        cout << "Inside Fun\n";
+    }
 
-        void Gun()
-        {
-            cout<<"Inside Gun\n";
-        }
+    // Member function 'Gun' that prints "Inside Gun\n" to the console
+    void Gun() {
+        cout << "Inside Gun\n";
+    }
 };
 
-int main()
-{
+int main() {
+    // Create an object of class 'Demo' named 'obj'
     Demo obj;
-    
-    cout<<sizeof(obj)<<"\n";    // 8
 
+    // Print the size of the object 'obj' in bytes using sizeof operator
+    cout << sizeof(obj) << "\n";  // This will typically output 8 (depends on the compiler and architecture)
+
+    // Assign values 11 and 21 to data members A and B of the object 'obj'
     obj.A = 11;
     obj.B = 21;
 
-    obj.Fun();                  // Inside Fun
-    obj.Gun();                  // Inside Gun
+    // Call the member function 'Fun' of the object 'obj'
+    obj.Fun();  // Prints "Inside Fun\n"
 
-    cout<<obj.A<<"\n";          // 11
-    cout<<obj.B<<"\n";          // 21
-    
+    // Call the member function 'Gun' of the object 'obj'
+    obj.Gun();  // Prints "Inside Gun\n"
+
+    // Print the values of data members A and B of the object 'obj'
+    cout << obj.A << "\n";  // Prints 11
+    cout << obj.B << "\n";  // Prints 21
+
     return 0;
 }
